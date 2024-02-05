@@ -1,0 +1,161 @@
+site_name: training.nextflow.io
+site_url: https://training.nextflow.io/
+repo_url: https://github.com/nextflow-io/training
+repo_name: nextflow-io/training
+
+nav:
+    - Home: index.md
+    - Foundational Training:
+          - basic_training/index.md
+          - basic_training/setup.md
+          - basic_training/intro.md
+          - basic_training/rnaseq_pipeline.md
+          - basic_training/containers.md
+          - basic_training/channels.md
+          - basic_training/processes.md
+          - basic_training/operators.md
+          - basic_training/groovy.md
+          - basic_training/modules.md
+          - basic_training/config.md
+          - basic_training/executors.md
+          - basic_training/seqera_platform.md
+          - basic_training/cache_and_resume.md
+          - basic_training/debugging.md
+    - Advanced Training:
+          - advanced/index.md
+          - advanced/setup.md
+          - advanced/operators.md
+          - advanced/metadata.md
+          - advanced/grouping.md
+          - advanced/groovy.md
+          - advanced/structure.md
+          - advanced/configuration.md
+          - advanced/summary.md
+          - advanced/support.md
+    - RNA-seq Variant Calling:
+          - hands_on/index.md
+          - hands_on/01_datasets.md
+          - hands_on/02_workflow.md
+          - hands_on/03_setup.md
+          - hands_on/04_implementation.md
+    - help.md
+
+theme:
+    name: material
+    custom_dir: docs/assets/overrides
+    language: en
+    logo: assets/img/nextflow-logo-white.png
+    favicon: assets/img/nextflow-icon.png
+    palette:
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+    font:
+        text: Inter
+    features:
+        - content.action.edit
+        - content.code.annotate
+        - content.code.copy
+        - navigation.footer
+        - navigation.tabs
+        - navigation.top
+        - navigation.tracking
+        - search.share
+        - toc.follow
+    icon:
+        repo: fontawesome/brands/github
+extra_css:
+    - assets/stylesheets/fonts.css
+    - assets/stylesheets/extra.css
+
+# Set in docs/assets/overrides/partials/copyright.html
+# so that we can have links and stuff
+# copyright: Seqera
+
+extra:
+    analytics:
+        provider: google
+        property: G-244N3GEN75
+    consent:
+        title: Cookie consent
+        description: >-
+            We use cookies to recognize your repeated visits and preferences, as well
+            as to measure the effectiveness of our documentation and whether users
+            find what they're searching for. With your consent, you're helping us to
+            make our documentation better.
+    # Overridden in docs/assets/overrides/partials/social.html
+    # Still needs to be set to something here so that the partial is used
+    social:
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/nextflowio
+          name: Nextflow on twitter
+markdown_extensions:
+    - admonition
+    - attr_list
+    - md_in_html
+    - pymdownx.details
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+          anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.snippets:
+          base_path: ["."]
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+          alternate_style: true
+    - tables
+    - toc:
+          title: On this page
+          permalink: true
+plugins:
+    - social:
+          cards: !ENV [CARDS, true]
+          cards_color:
+              fill: "#58BD9F"
+              text: "#FFFFFF"
+    - enumerate-headings:
+          restart_increment_after:
+              - hands_on/01_datasets.md
+              - advanced/operators.md
+          exclude:
+              - index.md
+              - help.md
+              - basic_training/index.md
+              - hands_on/index.md
+              - hands_on/solutions/*md
+    - i18n:
+          docs_structure: suffix
+          fallback_to_default: true
+          languages:
+              - build: true
+                default: true
+                locale: en
+                name: English
+              - build: true
+                default: false
+                locale: pt
+                name: Português
+              - build: true
+                default: false
+                locale: es
+                name: Español
+              - build: true
+                default: false
+                locale: fr
+                name: Français
+          reconfigure_material: true
+          reconfigure_search: true
+    - search
