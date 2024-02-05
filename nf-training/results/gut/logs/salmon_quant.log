@@ -1,0 +1,39 @@
+[2024-02-05 18:17:58.271] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2024-02-05 18:17:58.271] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2024-02-05 18:17:58.271] [jointLog] [info] Usage of --validateMappings implies a default consensus slack of 0.2. Setting consensusSlack to 0.35.
+[2024-02-05 18:17:58.271] [jointLog] [info] parsing read library format
+[2024-02-05 18:17:58.271] [jointLog] [info] There is 1 library.
+[2024-02-05 18:17:58.326] [jointLog] [info] Loading pufferfish index
+[2024-02-05 18:17:58.326] [jointLog] [info] Loading dense pufferfish index.
+[2024-02-05 18:17:58.327] [jointLog] [info] done
+[2024-02-05 18:17:58.327] [jointLog] [info] Index contained 1 targets
+[2024-02-05 18:17:58.327] [jointLog] [info] Number of decoys : 0
+[2024-02-05 18:17:58.327] [jointLog] [info] First decoy index : 18446744073709551615 
+[2024-02-05 18:17:58.388] [jointLog] [info] Computed 1 rich equivalence classes for further processing
+[2024-02-05 18:17:58.388] [jointLog] [info] Counted 2058 total reads in the equivalence classes 
+[2024-02-05 18:17:58.388] [jointLog] [info] Number of mappings discarded because of alignment score : 1540
+[2024-02-05 18:17:58.388] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 874
+[2024-02-05 18:17:58.388] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 0
+[2024-02-05 18:17:58.388] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 1037
+[2024-02-05 18:17:58.388] [jointLog] [warning] Only 2058 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2024-02-05 18:17:58.388] [jointLog] [info] Mapping rate = 70.0715%
+
+[2024-02-05 18:17:58.388] [jointLog] [info] finished quantifyLibrary()
+[2024-02-05 18:17:58.389] [jointLog] [info] Starting optimizer
+[2024-02-05 18:17:58.389] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2024-02-05 18:17:58.389] [jointLog] [info] iteration = 0 | max rel diff. = 2.20966e-16
+[2024-02-05 18:17:58.389] [jointLog] [info] iteration = 100 | max rel diff. = 0
+[2024-02-05 18:17:58.389] [jointLog] [info] Finished optimizer
+[2024-02-05 18:17:58.389] [jointLog] [info] writing output 
+
+[2024-02-05 18:17:58.389] [jointLog] [warning] NOTE: Read Lib [[ gut_1.fq, gut_2.fq]] :
+
+Detected a *potential* strand bias > 1% in an unstranded protocol check the file: gut/lib_format_counts.json for details
+
+[2024-02-05 18:17:58.388] [fileLog] [info] 
+At end of round 0
+==================
+Observed 2937 total fragments (2937 in most recent round)
+

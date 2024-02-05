@@ -5,6 +5,5 @@ serve
 nextflow
 work
 .nextflow*
-nf-training/results
 transcript-index
 .vscode
